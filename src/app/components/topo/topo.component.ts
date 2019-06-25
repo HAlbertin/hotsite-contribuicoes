@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopoComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    
+  }
 
   ngOnInit() {
   }
 
+  scrollToElement() {
+    document.getElementById('target').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+  }
 }

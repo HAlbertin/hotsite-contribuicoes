@@ -1,29 +1,51 @@
-<div class="container no-padding">
-    <div>
-      <img class="full-width" src="assets/onda-2.svg" />
-    </div>
+<div class="container no-padding" #target id="target">
+  <div>
+    <img class="full-width" src="assets/onda-2.svg" />
+  </div>
 
-    <div class="background">
-      <label class="text-center titulo">À sua maneira</label>
-      <div class="inner">&nbsp;</div>
+  <div class="background">
+    <label class="text-center titulo">À sua maneira</label>
+    <div class="inner">&nbsp;</div>
 
-      <div class="row tutorial-content">
-        <div class="col-6 no-padding">
-          <div class="row margin-top-40" *ngFor="let tutorial of tutorials">
-            <div class="col-12 no-padding-right" [attr.id]="'tutorial-' + tutorial.id" (click)="changeTutorial(tutorial.id)">
-              <div class="tutorial-tip" [ngClass]="{'inactive': !tutorial.active}">
-                <span class="circle">{{tutorial.id}}</span> 
-                {{tutorial.text}}
-              </div>
+    <div class="row tutorial-content">
+      <div class="col-6 no-padding">
+        <div class="row margin-top-40" *ngFor="let tutorial of tutorials">
+          <div class="col-12 no-padding-right" [attr.id]="'tutorial-' + tutorial.id" (click)="changeTutorial(tutorial.id)">
+            <div class="tutorial-tip" [ngClass]="{'inactive': !tutorial.active}">
+              <span class="circle">{{tutorial.id}}</span> 
+              {{tutorial.text}}
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="col-6 no-padding">
-          <div class="float-right phone no-padding">
-            <img src="assets/iphone-tutorial.png" class="" />
+      <div class="col-6 no-padding">
+        <div class="float-right phone no-padding">
+          <img src="assets/iphone-tutorial.png" class="phone-mock" />
+          <div *ngFor="let gif of tutorials">
+            <div *ngIf="gif.active">
+              <img [src]="gif.src" class="phone-gif" />
+              <div class="zoom-in zoom-in-icon" (click)="zoomIn(gif.id)"></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+<div *ngFor="let gif of tutorials">
+  <div *ngIf="gif.zoomActive && gif.active">
+    <div class="tutorial-zoom-tip">
+      <div class="row">
+        <div class="col-1">
+          <span class="circle margin-right-5">{{gif.id}}</span>
+        </div>
+        <p class="col-10 tutorial-zoom-tip-text">{{gif.text}}</p>
+      </div>
+    </div>
+  
+    <img [src]="gif.zoomSrc" class="tutorial-zoom" />
+    <div class="zoom-out zoom-out-icon" (click)="zoomOut()"></div>
+  </div>
 </div>

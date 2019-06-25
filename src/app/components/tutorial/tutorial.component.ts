@@ -11,17 +11,26 @@ export class TutorialComponent implements OnInit {
     {
       id: 1,
       text: 'Enriqueça o conteúdo selecionado com suas contribuições.',
-      active: true
+      active: true,
+      src: 'assets/tutorial-1.gif',
+      zoomSrc: 'assets/tutorial-1-zoom.gif',
+      zoomActive: false
     },
     {
       id: 2,
       text: 'Acrescente o que quiser: textos, imagens, áudios, vídeos ou regras de memorização.',
-      active: false
+      active: false,
+      src: 'assets/tutorial-2.gif',
+      zoomSrc: 'assets/tutorial-2-zoom.gif',
+      zoomActive: false
     },
     {
       id: 3,
       text: 'Tudo isso ficará à sua disposição no próprio material ou pelo menu.',
-      active: false
+      active: false,
+      src: 'assets/tutorial-3.gif',
+      zoomSrc: 'assets/tutorial-3-zoom.gif',
+      zoomActive: false
     }
   ];
 
@@ -37,6 +46,22 @@ export class TutorialComponent implements OnInit {
       if (this.tutorials[i].id === id) {
         this.tutorials[i].active = true;
       }
+    }
+  }
+
+  zoomIn(id) {
+    for (let i = 0; i < this.tutorials.length; i++) {
+      this.tutorials[i].zoomActive = false;
+
+      if (this.tutorials[i].id === id) {
+        this.tutorials[i].zoomActive = true;
+      }
+    }
+  }
+
+  zoomOut() {
+    for (let i = 0; i < this.tutorials.length; i++) {
+      this.tutorials[i].zoomActive = false;
     }
   }
 
