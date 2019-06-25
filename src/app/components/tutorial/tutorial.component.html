@@ -1,0 +1,29 @@
+<div class="container no-padding">
+    <div>
+      <img class="full-width" src="assets/onda-2.svg" />
+    </div>
+
+    <div class="background">
+      <label class="text-center titulo">À sua maneira</label>
+      <div class="inner">&nbsp;</div>
+
+      <div class="row tutorial-content">
+        <div class="col-6 no-padding">
+          <div class="row margin-top-40" *ngFor="let tutorial of tutorials">
+            <div class="col-12 no-padding-right" [attr.id]="'tutorial-' + tutorial.id" (click)="changeTutorial(tutorial.id)">
+              <div class="tutorial-tip" [ngClass]="{'inactive': !tutorial.active}">
+                <span class="circle">{{tutorial.id}}</span> 
+                {{tutorial.text}}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 no-padding">
+          <div class="float-right phone no-padding">
+            <img src="assets/iphone-tutorial.png" class="" />
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+.titulo {
+    width: 100%;
+    height: 22px;
+    font-family: Roboto;
+    font-size: 18px;
+    color: #f2937e;
+    font-weight: 700;
+    text-decoration: none solid rgb(242, 147, 126);
+    text-align: center;
+}
+
+.container {
+    margin-top: 40px !important;
+}
+
+.inner {
+    margin: 0px auto;
+    border-bottom: 3px solid #f2937e;
+    width: 50px;
+    height: 0;
+    border-radius: 40px;
+}
+
+.icone {
+    width: 26px;
+    height: 26px;
+    position: relative;
+    margin: 0 auto;
+    display: block;
+}
+
+.icone-titulo {
+    font-family: Roboto;
+    font-size: 16px;
+    color: #1f1f1f;
+    font-weight: 500;
+    text-decoration: none solid rgb(31, 31, 31);
+    text-align: center;
+}
+
+.icone-descricao {
+    font-family: Roboto;
+    font-size: 11px;
+    color: #878787;
+    text-decoration: none solid rgb(135, 135, 135);
+    text-align: center;
+}
+
+p {
+    margin-bottom: 0;
+}

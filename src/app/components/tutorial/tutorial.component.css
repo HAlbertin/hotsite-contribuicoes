@@ -1,0 +1,68 @@
+.background {
+    width: 100%;
+    height: 592px;
+    background-color: #dcf2de;
+    background-size: cover;
+}
+
+.titulo {
+    width: 100%;
+    height: 21px;
+    font-family: Roboto;
+    font-size: 18px;
+    color: #f2937e;
+    font-weight: 700;
+    text-decoration: none solid rgb(242, 147, 126);
+    text-align: center;
+}
+
+.circle {
+    width: 17px;
+    height: 17px;
+    border: 2px solid #f2937e;
+    border-radius: 50%;
+    background-size: cover;
+    font-family: Roboto;
+    font-size: 10px;
+    color: #f2937e;
+    font-weight: 700;
+    text-align: center;
+    display: inline-block;
+}
+
+.row {
+    margin: 0 !important;
+}
+
+.margin-top-40 {
+    margin-top: 40px !important;
+}
+
+.phone {
+    bottom: 90px;
+    left: 65px;
+    position: relative;
+}
+
+.tutorial-tip {
+    font-family: Roboto;
+    font-size: 12px;
+    color: #333333;
+}
+
+.tutorial-tip.inactive {
+    opacity: 0.3;
+}
+
+
+.tutorial-content {
+    margin-top: 35px !important;
+}
+
+.inner {
+    margin: 0px auto;
+    border-bottom: 3px solid #f2937e;
+    width: 50px;
+    height: 0;
+    border-radius: 40px;
+}
